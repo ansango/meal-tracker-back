@@ -1,4 +1,4 @@
-import { addIngredientsRoute } from "./addIngredientsRoute";
+import { addIngredientRoute } from "./addIngredientRoute";
 import { addMealRoute } from "./addMealRoute";
 import { deleteIngredientRoute } from "./deleteIngredientRoute";
 import { deleteMealRoute } from "./deleteMealRoute";
@@ -8,7 +8,7 @@ import { getShoppingListRoute } from "./getShoppingListRoute";
 import { searchRecipesRoute } from "./searchRecipesRoute";
 
 export const routes = [
-  addIngredientsRoute,
+  addIngredientRoute,
   addMealRoute,
   deleteIngredientRoute,
   deleteMealRoute,
