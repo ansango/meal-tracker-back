@@ -9,7 +9,6 @@ const addMealRoute = {
       recipeId,
       plannedDate: date,
     };
-
     await insertMeal(newMeal);
     const updatedMeals = await getPopulatedMeals();
     res.status(200).json(updatedMeals);
