@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const routes = require("./routes");
@@ -8,6 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 app.use(morgan("dev"));
 
 const PORT = process.env.PORT || 8080;
