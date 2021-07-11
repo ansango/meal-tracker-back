@@ -4,6 +4,7 @@ const deleteIngredientRoute = require("./deleteIngredientRoute");
 const deleteMealRoute = require("./deleteMealRoute");
 const getIngredientsRoute = require("./getIngredientsRoute");
 const getMealsRoute = require("./getMealsRoute");
+const getRecipeRoute = require("./getRecipeRoute");
 const getShoppingListRoute = require("./getShoppingListRoute");
 const searchRecipesRoute = require("./searchRecipesRoute");
 
@@ -14,6 +15,7 @@ const routes = [
   deleteMealRoute,
   getIngredientsRoute,
   getMealsRoute,
+  getRecipeRoute,
   getShoppingListRoute,
   searchRecipesRoute,
 ];
