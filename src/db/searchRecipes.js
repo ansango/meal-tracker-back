@@ -1,9 +1,11 @@
-import { db } from "./db";
+const db = require("./db");
 
-export const searchRecipes = async (searchString) => {
+const searchRecipes = async (searchString) => {
   const connection = await db.getConnection();
   return connection
     .collection("recipes")
     .find({ $text: { $search: searchString } })
     .toArray();
 };
+
+module.exports = searchRecipes;

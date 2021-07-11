@@ -1,8 +1,8 @@
-import { MongoClient } from "mongodb";
+const { MongoClient } = require("mongodb");
 
 const DB_NAME = "meal-tracker";
 
-export const db = {
+const db = {
   _dbClient: null,
   connect: async function (url) {
     const client = await MongoClient.connect(url, {
@@ -22,3 +22,5 @@ export const db = {
     return this._dbClient.db(DB_NAME);
   },
 };
+
+module.exports = db;

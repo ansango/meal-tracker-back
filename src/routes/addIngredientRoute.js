@@ -1,6 +1,6 @@
-import { getIngredients, insertIngredient } from "../db";
+const { getIngredients, insertIngredient } = require("../db");
 
-export const addIngredientRoute = {
+const addIngredientRoute = {
   method: "post",
   path: "/ingredients",
   handler: async (req, res) => {
@@ -10,3 +10,5 @@ export const addIngredientRoute = {
     res.status(200).json(updatedIngredients);
   },
 };
+
+module.exports = addIngredientRoute;

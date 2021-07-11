@@ -1,8 +1,10 @@
-import { db } from "./db";
+const db = require("./db");
 
-export const deleteIngredient = async (ingredientName) => {
+const deleteIngredient = async (ingredientName) => {
   const connection = db.getConnection();
   await connection
     .collection("ingredients")
     .deleteOne({ name: ingredientName });
 };
+
+module.exports = deleteIngredient;

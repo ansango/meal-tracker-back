@@ -1,7 +1,7 @@
-import { getMeals } from "./getMeals";
-import { getRecipes } from "./getRecipes";
+const getMeals = require("./getMeals");
+const getRecipes = require("./getRecipes");
 
-export const getPopulatedMeals = async () => {
+const getPopulatedMeals = async () => {
   const meals = await getMeals();
   const recipes = await getRecipes();
   return meals.map((meal) => ({
@@ -9,3 +9,5 @@ export const getPopulatedMeals = async () => {
     recipe: recipes.find((recipe) => recipe.id === meal.recipeId),
   }));
 };
+
+module.exports = getPopulatedMeals;

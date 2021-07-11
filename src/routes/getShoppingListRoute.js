@@ -1,6 +1,6 @@
-import { getIngredients, getPopulatedMeals } from "../db";
+const { getIngredients, getPopulatedMeals } = require("../db");
 
-export const getShoppingListRoute = {
+const getShoppingListRoute = {
   method: "get",
   path: "/shopping-list",
   handler: async (req, res) => {
@@ -28,3 +28,5 @@ export const getShoppingListRoute = {
     return res.status(200).json(missingIngredients);
   },
 };
+
+module.exports = getShoppingListRoute;

@@ -1,6 +1,8 @@
-import { db } from "./db";
+const db = require("./db");
 
-export const insertMeal = async (meal) => {
+const insertMeal = async (meal) => {
   const connection = db.getConnection();
   connection.collection("meals").insertOne(meal);
 };
+
+module.exports = insertMeal;

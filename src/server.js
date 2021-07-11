@@ -1,15 +1,14 @@
-import express from "express";
-import bodyParser from "body-parser";
-import morgan from "morgan";
-import dotenv from "dotenv";
-import { routes } from "./routes";
-import { db } from "./db";
-
-const app = express();
-app.use(morgan("dev"));
+const express = require("express");
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
+const routes = require("./routes");
+const db = require("./db/db");
 dotenv.config();
 
+const app = express();
 app.use(bodyParser.json());
+app.use(morgan("dev"));
 
 const PORT = process.env.PORT || 8080;
 const DB = process.env.MONGO_URI_PROD;

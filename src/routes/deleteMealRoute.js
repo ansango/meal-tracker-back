@@ -1,6 +1,6 @@
-import { deleteMeal, getPopulatedMeals } from "../db";
+const { deleteMeal, getPopulatedMeals } = require("../db");
 
-export const deleteMealRoute = {
+const deleteMealRoute = {
   method: "delete",
   path: "/meals/:id",
   handler: async (req, res) => {
@@ -10,3 +10,5 @@ export const deleteMealRoute = {
     res.status(200).json(updatedMeals);
   },
 };
+
+module.exports = deleteMealRoute;

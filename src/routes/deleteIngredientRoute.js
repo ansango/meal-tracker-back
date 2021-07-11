@@ -1,5 +1,6 @@
-import { deleteIngredient, getIngredients } from "../db";
-export const deleteIngredientRoute = {
+const { deleteIngredient, getIngredients } = require("../db");
+
+const deleteIngredientRoute = {
   method: "delete",
   path: "/ingredients/:name",
   handler: async (req, res) => {
@@ -9,3 +10,5 @@ export const deleteIngredientRoute = {
     res.status(200).json(updateIngredients);
   },
 };
+
+module.exports = deleteIngredientRoute;

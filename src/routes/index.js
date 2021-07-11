@@ -1,13 +1,13 @@
-import { addIngredientRoute } from "./addIngredientRoute";
-import { addMealRoute } from "./addMealRoute";
-import { deleteIngredientRoute } from "./deleteIngredientRoute";
-import { deleteMealRoute } from "./deleteMealRoute";
-import { getIngredientsRoute } from "./getIngredientsRoute";
-import { getMealsRoute } from "./getMealsRoute";
-import { getShoppingListRoute } from "./getShoppingListRoute";
-import { searchRecipesRoute } from "./searchRecipesRoute";
+const addIngredientRoute = require("./addIngredientRoute");
+const addMealRoute = require("./addMealRoute");
+const deleteIngredientRoute = require("./deleteIngredientRoute");
+const deleteMealRoute = require("./deleteMealRoute");
+const getIngredientsRoute = require("./getIngredientsRoute");
+const getMealsRoute = require("./getMealsRoute");
+const getShoppingListRoute = require("./getShoppingListRoute");
+const searchRecipesRoute = require("./searchRecipesRoute");
 
-export const routes = [
+const routes = [
   addIngredientRoute,
   addMealRoute,
   deleteIngredientRoute,
@@ -17,3 +17,5 @@ export const routes = [
   getShoppingListRoute,
   searchRecipesRoute,
 ];
+
+module.exports = routes;

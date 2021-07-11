@@ -1,6 +1,8 @@
-import { db } from "./db";
+const db = require("./db");
 
-export const insertIngredient = async (ingredient) => {
+const insertIngredient = async (ingredient) => {
   const connection = db.getConnection();
   await connection.collection("ingredients").insertOne(ingredient);
 };
+
+module.exports = insertIngredient
